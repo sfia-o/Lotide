@@ -39,9 +39,12 @@ const eqObjects = function(object1, object2) {
 
 const assertObjectsEqual = function(actual, expected) {
   if (eqObjects(actual, expected)) {
-    console.log("Objects are equal");
+    console.log(`✅ Assertion Passed: ${actual}  ===  ${expected}`);
   } else {
-    console.log("Objects are not equal");
+    console.log(`🛑Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
+const tshirt = {size: "M", color: "red"};
+const otherTshirt = {size: "M", color: "red"};
+assertObjectsEqual(tshirt, otherTshirt)
