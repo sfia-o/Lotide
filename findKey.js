@@ -11,6 +11,7 @@ const findKey = (objects, callback) => {
 
   for (let object in objects) {
 
+    //to use the callback we are looking for the value or object within our objects so we use object[value] or in this case objects[object]
     if (callback(objects[object])) {
       return object;
     }
