@@ -15,13 +15,11 @@ const countLetters = function(sentence) {
 
     if (result[letter]) {
       result[letter] += 1;
-    } else if (result[letter] === " ") {
-      result[letter] = 0;
-    } else {
-      result[letter] = 1;
+    } 
+    result[letter] = 1;
     }
 
-  } console.log(result);
+   return result;
 };
 
-countLetters("lighthouse in the house");
+console.log(countLetters("Lighthouse in the house")); 
