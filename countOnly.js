@@ -2,25 +2,18 @@ const assertEqual = require('./assertEqual');
 
 const countOnly = function(allItems, itemsToCount) {
 
-  //create new object to return results in
   const results = {};
   
-  //iterate through allitems array
   for (const item of allItems) {
 
-    //if the item of the array is present in the object
     if (itemsToCount[item]) {
-  
-      //if it is also present in the new object results then add +1 to count
+
       if (results[item]) {
         results[item] += 1;
-
-        //if not yet present there than make it just 1
       } else {
         results[item] = 1;
       }
     }
-  
   }
   return results;
 };
