@@ -1,24 +1,6 @@
-const eqArrays = function(arr1, arr2) {
+const eqArrays = require('./eqArrays');
 
-  if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
-
-const assertArraysEqual = function(arr3, arr4) {
-  if (eqArrays(arr3, arr4)) {
-    console.log(`✅ Assertion Passed: ${arr3}  ===  ${arr4}`);
-  } else {
-    console.log(`🛑Assertion Failed: ${arr3} !== ${arr4}`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 const map = function(array, callback) {
 
@@ -31,25 +13,22 @@ const map = function(array, callback) {
 
 };
 
+module.exports = map;
 
-const words = ["ground", "control", "to", "major", "tom"];
+// const words = ["ground", "control", "to", "major", "tom"];
 
-const results1 = map(words, word => word[0]);
-console.log(results1);
+// const results1 = map(words, word => word[0]);
+// console.log(results1);
 
+// const countries = ["China", "Australia", "Slovenia", "Mozambique"];
+// const consonants = ["C", "A", "S", "M"];
 
-const countries = ["China", "Australia", "Slovenia", "Mozambique"];
-const consonants = ["C", "A", "S", "M"];
+// const results2 = map(countries, country => country[0]);
 
-const results2 = map(countries, country => country[0]);
+// const lengths = [5, 9, 8, 10];
+// const results3 = map(countries, country => country.length);
 
-const lengths = [5, 9, 8, 10];
-const results3 = map(countries, country => country.length);
-
-
-
-
-assertArraysEqual(results2, consonants);
-assertArraysEqual(results3, lengths);
-assertArraysEqual(words, results2);
+// assertArraysEqual(results2, consonants);
+// assertArraysEqual(results3, lengths);
+// assertArraysEqual(words, results2);
 

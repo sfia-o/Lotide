@@ -1,11 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual}  ===  ${expected}`);
-  } else {
-    console.log(`🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
-
-};
+const assertEqual = require('./assertEqual');
 
 const countLetters = function(sentence) {
   let result = {};
@@ -22,4 +15,6 @@ const countLetters = function(sentence) {
    return result;
 };
 
-console.log(countLetters("Lighthouse in the house")); 
+// console.log(countLetters("Lighthouse in the house")); 
+
+module.exports = countLetters;

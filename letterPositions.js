@@ -1,24 +1,6 @@
-const eqArrays = function(arr1, arr2) {
+const eqArrays = require('./eqArrays');
 
-  if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
-
-const assertArraysEqual = function(arr3, arr4) {
-  if (eqArrays(arr3, arr4)) {
-    console.log("Arrays are equal");
-  } else {
-    console.log("Arrays are not equal");
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -32,16 +14,14 @@ const letterPositions = function(sentence) {
     for (let i = 0; i < string.length; i++) {
       if (char === string[i]) {
         results[char].push(i);
-           
       }
     }
-    
-    
   }
-
   return results;
 };
 
-console.log(letterPositions("hello"));
-console.log(letterPositions("Lighthouse Labs"));
+module.exports = letterPositions;
+
+// console.log(letterPositions("hello"));
+// console.log(letterPositions("Lighthouse Labs"));
 
