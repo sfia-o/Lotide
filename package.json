@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "sfia_o/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A mini clone of the Lodash library, LighthouseLabs student project",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -9,7 +9,10 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
+  "author": {
+    "name": "Sofia Oliveira",
+    "email": "sofia.vl.oliveira@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.7",
